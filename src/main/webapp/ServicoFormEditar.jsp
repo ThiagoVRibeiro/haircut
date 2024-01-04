@@ -17,6 +17,7 @@
 	<h1>Editar tipos de serviços cadastrados</h1>
 	
 	<form action="ServicoEditar.jsp" method="post">
+		<input type="hidden" name="id" value="<%=servico.getId()%>">
 		<table>
 			<tr>
 				<td>Serviço: </td>

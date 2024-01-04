@@ -17,6 +17,7 @@
 	<h1>Editar clientes cadastrados</h1>
 	
 	<form action="ClienteEditar.jsp" method="post">
+		<input type="hidden" name="id" value="<%=cliente.getId()%>">
 		<table>
 			<tr>
 				<td>Cliente: </td>

@@ -27,7 +27,7 @@
 			<tr>
 				<td>${cliente.getId()}</td>
 				<td>${cliente.getNome()}</td>
-				<td>${servico.getTelefone()}</td>
+				<td>${cliente.getTelefone()}</td>
 				<td><a href="ClienteFormEditar.jsp?id=${cliente.getId() }">Editar</a></td>
 				<td><a href="ClienteFormDeletar.jsp?id=${cliente.getId() }">Excluir</a></td>
 			</tr>
