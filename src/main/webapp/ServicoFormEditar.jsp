@@ -16,7 +16,7 @@
 	
 	<h1>Editar tipos de serviços cadastrados</h1>
 	
-	<form action="editarServico.jsp" method="post">
+	<form action="ServicoEditar.jsp" method="post">
 		<table>
 			<tr>
 				<td>Serviço: </td>

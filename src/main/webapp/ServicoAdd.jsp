@@ -10,9 +10,9 @@
 	int i = servicoDAO.salvarServico(s);
 
 	if(i > 0){
-		response.sendRedirect("addServico-success.jsp");
+		response.sendRedirect("ServicoAddSucesso.jsp");
 	}else{
-		response.sendRedirect("addServico-error.jsp");
+		response.sendRedirect("ServicoAddErro.jsp");
 	}
 
 %>

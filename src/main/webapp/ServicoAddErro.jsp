@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>HAIR CUT - Adicionar Serviço</title>
+<title>Servico</title>
 </head>
 <body>
-
-	<jsp:include page="servicoForm.html"></jsp:include>
-
+	<p>Registro com erro</p>
+	<jsp:include page="ServicoForm.html"></jsp:include>
 </body>
 </html>

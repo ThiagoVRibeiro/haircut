@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Add Servico Success</title>
+<title>Servico</title>
 </head>
 <body>
 	<p>Registro Salvo com sucesso</p>
-	<jsp:include page="servicoForm.html"></jsp:include>
+	<jsp:include page="ServicoForm.html"></jsp:include>
 </body>
 </html>

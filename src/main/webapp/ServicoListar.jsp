@@ -30,8 +30,8 @@
 				<td>${servico.getNomeServico()}</td>
 				<td>${servico.getDescricaoServico()}</td>
 				<td>${servico.getValorServico()}</td>
-				<td><a href="editarFormServico.jsp?id=${servico.getId() }">Editar</a></td>
-				<td><a href="deleteServico.jsp?id=${servico.getId() }">Excluir</a></td>
+				<td><a href="ServicoFormEditar.jsp?id=${servico.getId() }">Editar</a></td>
+				<td><a href="ServicoDeletar.jsp?id=${servico.getId() }">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>
