@@ -121,7 +121,6 @@ public class ClienteDAO {
 			e.printStackTrace();
 		}
 		return cliente;
-		
 	}
 	
 }
