@@ -8,6 +8,9 @@
 </head>
 <body>
 	<a href="adicionarServico.jsp">Adicionar Serviço</a>
-	<a href="listarServico.jsp">Listar Serviço</a>
+	<a href="listarServico.jsp">Listar Serviço</a></br>
+	<a href="ClienteAdicionar.jsp">Adicionar Cliente</a>
+	<a href="ClienteListar.jsp">Listar Cliente</a>
 </body>
 </html>
+
