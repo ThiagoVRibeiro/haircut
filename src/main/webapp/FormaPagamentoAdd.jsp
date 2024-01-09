@@ -1,5 +1,5 @@
 <%@page import="com.haircut.dao.FormaPagamentoDAO" %>
-<jsp:useBean id="f" class="com.haircut.bean.Cliente"></jsp:useBean>
+<jsp:useBean id="f" class="com.haircut.bean.FormaPagamento"></jsp:useBean>
 <jsp:setProperty property="*" name="f"/>
 
 <head>
@@ -7,7 +7,9 @@
 </head>
 
 <%
-	int i = FormaPagamentoDAO.salvarCliente(f);
+
+	int i = FormaPagamentoDAO.salvarFormaPagamento(f);	
+
 
 	if(i > 0){
 		response.sendRedirect("FormaPagamentoAddSucesso.jsp");

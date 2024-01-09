@@ -23,17 +23,17 @@ public class FormaPagamentoDAO {
 		return con;
 	}
 	
-	public static int salvarFormaPagamento(FormaPagamento fp) {
+	public static int salvarFormaPagamento(FormaPagamento f) {
 		int status = 0;
 		
 		try {
 			Connection con = getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO formapagamento(nome) VALUES (?)");
-			ps.setString(1, fp.getNome());
+			ps.setString(1, f.getNome());
 			status = ps.executeUpdate();
 			
 			System.out.println("Máquina serviço");
-			System.out.println(fp.getNome());
+			System.out.println(f.getNome());
 			
 		} catch (Exception e) {
 			System.out.println(e);
@@ -63,12 +63,12 @@ public class FormaPagamentoDAO {
 		return list;
 	}
 	
-	public static int deletarFormaPagamento(FormaPagamento fp) {
+	public static int deletarFormaPagamento(FormaPagamento f) {
 		int status = 0;
 		try {
 			Connection con = getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM formapagamento WHERE id=?");
-			ps.setInt(1, fp.getId());
+			ps.setInt(1, f.getId());
 			status=ps.executeUpdate();
 		} catch (Exception e) {
 			System.out.println(e);
@@ -76,15 +76,15 @@ public class FormaPagamentoDAO {
 		return status;
 	}
 	
-	public static int updateFormaPagamento(FormaPagamento fp) {
+	public static int updateFormaPagamento(FormaPagamento f) {
 		int status = 0;
 		
 		try {
 			Connection con = getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE formapagamento SET nome=? WHERE id=?");
 			
-			ps.setString(1, fp.getNome());
-			ps.setInt(2, fp.getId());
+			ps.setString(1, f.getNome());
+			ps.setInt(2, f.getId());
 			status = ps.executeUpdate();
 			
 		} catch (Exception e) {
