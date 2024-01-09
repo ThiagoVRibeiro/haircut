@@ -7,10 +7,13 @@
 <title>HAIR CUT - Cabeleireiro Unissex</title>
 </head>
 <body>
-	<a href="ServicoAdicionar.jsp">Adicionar Serviço</a>
+	<a href="ServicoAdicionar.jsp">Cadastrar Serviço</a>
 	<a href="ServicoListar.jsp">Listar Serviço</a></br>
-	<a href="ClienteAdicionar.jsp">Adicionar Cliente</a>
-	<a href="ClienteListar.jsp">Listar Cliente</a>
+	<a href="ClienteAdicionar.jsp">Cadastrar Cliente</a>
+	<a href="ClienteListar.jsp">Listar Cliente</a></br>
+	<a href="FormaPagamentoAdicionar.jsp">Cadastrar Forma de Pagamento</a>
+	<a href="FormaPagamentoListar.jsp">Listar Forma de Pagamento</a>
+	
 </body>
 </html>
 
