@@ -28,14 +28,22 @@ public class RegistrarServicoDAO {
 		
 		try {
 			Connection con = getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO servicorealizado(observacao, id_funcionario, id_cliente, id_servico, id_formapagamento) VALUES (?,?,?,?,?)");
+			/*PreparedStatement ps = con.prepareStatement("INSERT INTO servicorealizado(observacao, id_funcionario, id_cliente, id_servico, id_formapagamento) VALUES (?,?,?,?,?)");
 			ps.setString(1, r.getObservacao());
 			ps.setInt(2, r.getCabeleireiro().getId());
 			ps.setInt(3, r.getCliente().getId());
 			ps.setInt(4, r.getServico().getId());
 			ps.setInt(5, r.getFormaPagamento().getId());
-			
+			System.out.println(r.getCliente());
+			status = ps.executeUpdate();*/
+
+			System.out.println(r.getCliente());
+			PreparedStatement ps = con.prepareStatement("INSERT INTO servicoreal(id_cliente) VALUES (?)");
+			ps.setInt(1, r.getCliente().getId());
+			System.out.println(r.getCliente());
 			status = ps.executeUpdate();
+
+			
 			
 		} catch (Exception e) {
 			System.out.println(e);
@@ -44,19 +52,21 @@ public class RegistrarServicoDAO {
 		return status;
 	}
 	
+	/*
 	public static List<RegistrarServico> getAllRegistrarServicos(){
 		List<RegistrarServico> list = new ArrayList<RegistrarServico>();
 		
 		try {
 			Connection con = getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM formapagamento");
+			//select nome from clientes inner join servicorealizado servicorealizado on clientes.id = servicorealizado.id_cliente where clientes.id = 1;
+			PreparedStatement ps = con.prepareStatement("SELECT * FROM servicorealizado");
 			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {
-				RegistrarServico formapagamento = new RegistrarServico();
-				formapagamento.setId(rs.getInt("id"));
-				formapagamento.setNome(rs.getString("nome"));
-				list.add(formapagamento);
+				RegistrarServico registrarservico = new RegistrarServico();
+				registrarservico.setId(rs.getInt("id"));
+				registrarservico.set(rs.getString("id_cliente"));
+				list.add(registrarservico);
 			}
 			
 		} catch (Exception e) {
@@ -116,6 +126,6 @@ public class RegistrarServicoDAO {
 			e.printStackTrace();
 		}
 		return formaPagamento;
-	}
+	}*/
 	
 }

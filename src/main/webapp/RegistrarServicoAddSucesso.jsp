@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>HAIR CUT - Adicionar Forma de Pagamento</title>
+<title>Forma Pagamento</title>
 </head>
 <body>
-
+	<p>Forma de pagamento adicionado com sucesso</p>
 	<jsp:include page="RegistrarServicoForm.jsp"></jsp:include>
-
 </body>
 </html>

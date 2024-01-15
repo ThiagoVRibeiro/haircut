@@ -7,14 +7,16 @@
 <title>Editar Cliente</title>
 </head>
 <body>
+	
+	
+	<h1>Editar clientes cadastrados</h1>
+	
 	<%@page import="com.haircut.bean.Cliente, com.haircut.dao.ClienteDAO" %>
 	
 	<%
 		String id = request.getParameter("id");
 		Cliente cliente = ClienteDAO.getRegistroClienteById(Integer.parseInt(id));
 	%>
-	
-	<h1>Editar clientes cadastrados</h1>
 	
 	<form action="ClienteEditar.jsp" method="post">
 		<input type="hidden" name="id" value="<%=cliente.getId()%>">

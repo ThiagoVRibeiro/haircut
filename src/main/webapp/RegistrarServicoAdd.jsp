@@ -1,6 +1,6 @@
-<%@page import="com.haircut.dao.FormaPagamentoDAO" %>
-<jsp:useBean id="f" class="com.haircut.bean.FormaPagamento"></jsp:useBean>
-<jsp:setProperty property="*" name="f"/>
+<%@page import="com.haircut.dao.RegistrarServicoDAO" %>
+<jsp:useBean id="r" class="com.haircut.bean.RegistrarServico"></jsp:useBean>
+<jsp:setProperty property="*" name="r"/>
 
 <head>
 <meta charset="UTF-8">
@@ -8,13 +8,13 @@
 
 <%
 
-	int i = FormaPagamentoDAO.salvarFormaPagamento(f);	
+	int i = RegistrarServicoDAO.salvarRegistrarServico(r);	
 
 
 	if(i > 0){
-		response.sendRedirect("FormaPagamentoAddSucesso.jsp");
+		response.sendRedirect("RegistrarServicoAddSucesso.jsp");
 	}else{
-		response.sendRedirect("FormaPagamentoErro.jsp");
+		response.sendRedirect("RegistrarServicoAddErro.jsp");
 	}
 
 %>
