@@ -37,10 +37,10 @@ public class RegistrarServicoDAO {
 			System.out.println(r.getCliente());
 			status = ps.executeUpdate();*/
 
-			System.out.println(r.getCliente());
+			System.out.println("Cliente" + r.getCliente());
 			PreparedStatement ps = con.prepareStatement("INSERT INTO servicoreal(id_cliente) VALUES (?)");
 			ps.setInt(1, r.getCliente().getId());
-			System.out.println(r.getCliente());
+			System.out.println("DAO" + r.getCliente());
 			status = ps.executeUpdate();
 
 			

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Visualização de Clientes</title>
+<title>Visualizaï¿½ï¿½o de Clientes</title>
 </head>
 <body>
 	<%@ page import="com.haircut.dao.ClienteDAO, com.haircut.bean.*, java.util.*" %>

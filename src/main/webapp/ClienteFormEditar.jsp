@@ -21,6 +21,10 @@
 	<form action="ClienteEditar.jsp" method="post">
 		<input type="hidden" name="id" value="<%=cliente.getId()%>">
 		<table>
+		<tr>
+				<td>ID: </td>
+				<td><input type="text" name="id" value="<%=cliente.getId() %>"/></td>
+			</tr>
 			<tr>
 				<td>Cliente: </td>
 				<td><input type="text" name="nome" value="<%=cliente.getNome() %>"/></td>

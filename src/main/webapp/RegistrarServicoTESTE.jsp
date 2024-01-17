@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-	<h1>Registrar Serviço Realizado</h1>
+	<h1>PAGINA JSP PRA RECEBER O PARAMETRO</h1>
 	
 	
 	<%@page import="com.haircut.bean.RegistrarServico, com.haircut.dao.RegistrarServicoDAO" %>
@@ -17,31 +17,17 @@
 		
 
 	<%
-		ClienteDAO clienteDAO = new ClienteDAO();
-		List<Cliente>clientes=clienteDAO.getAllClientes();
+		String id = request.getParameter("id");
+		Cliente clientes = ClienteDAO.getRegistroClienteById(Integer.parseInt(id));
 	%>
 
 	<form action="RegistrarServicoAdd.jsp" method="post">
-
+		<input type="hidden" name="id" value="<%=clientes.getId()%>">
 		<table>
 			<tr>
 				<td>Cliente: </td>
 				<td>				
-					<select>
-						<option>Selecione</option>
-						<option name="id" value="1">1</option>
-						
-						 <%
-						
-						for(Cliente cliente:clientes){
-						%>
-						<option value="<%=cliente.getId() %>"><%=cliente.getNome() %></option>
-						<%
-						System.out.println(cliente.getNome());
-						} %>
-						</select>
-						
-					</select>
+					<%System.out.print(clientes.getId()); %>
 				</td>
 			</tr>
 			<!-- <tr>
@@ -65,8 +51,15 @@
 			</tr> -->
 			<tr>
 				<td colspan="2">
+					<a href="RegistrarServicoForm.jsp?id=${cliente.getId() }">Editar</a>
 					<input type="submit" value="Registrar Serviço" />
 				</td>
+			</tr>
+			<tr>
+			<%
+				String nome = request.getParameter("id");
+				out.print("Olá" + nome);
+			%>
 			</tr>
 		</table>
 	</form>
