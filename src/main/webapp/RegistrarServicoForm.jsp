@@ -13,12 +13,16 @@
 	
 	<%@page import="com.haircut.bean.RegistrarServico, com.haircut.dao.RegistrarServicoDAO" %>
 	<%@page import="com.haircut.bean.Cliente, com.haircut.dao.ClienteDAO" %>
+	<%@page import="com.haircut.bean.FormaPagamento, com.haircut.dao.FormaPagamentoDAO" %>
 		
 		
 
 	<%
 		ClienteDAO clienteDAO = new ClienteDAO();
 		List<Cliente>clientes=clienteDAO.getAllClientes();
+		
+		FormaPagamentoDAO formapagamentoDAO = new FormaPagamentoDAO();
+		List<FormaPagamento> listFormaPagamento = formapagamentoDAO.getAllFormaPagamentos();
 	%>
 
 	<form action="RegistrarServicoAdd.jsp" method="post">
@@ -36,6 +40,24 @@
 						<option value="<%=cliente.getId() %>"><%=cliente.getNome() %></option>
 						<%
 						System.out.println(cliente.getNome());
+						} %>
+						</select>
+						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Forma de Pagamento: </td>
+				<td>				
+					<select name="fp">
+						<option>Selecione</option>
+						 <%
+						
+						for(FormaPagamento formaPagamento:listFormaPagamento){
+						%>
+						<option value="<%=formaPagamento.getId() %>"><%=formaPagamento.getNome() %></option>
+						<%
+						System.out.println(formaPagamento.getNome());
 						} %>
 						</select>
 						
