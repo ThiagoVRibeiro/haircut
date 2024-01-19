@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.haircut.bean.Cliente;
 import com.haircut.bean.RegistrarServico;
 
 public class RegistrarServicoDAO {
@@ -23,7 +24,7 @@ public class RegistrarServicoDAO {
 		return con;
 	}
 	
-	public static int salvarRegistrarServico(RegistrarServico r) {
+	public static int salvarRegistrarServico(Cliente c) {
 		int status = 0;
 		
 		try {
@@ -37,10 +38,10 @@ public class RegistrarServicoDAO {
 			System.out.println(r.getCliente());
 			status = ps.executeUpdate();*/
 
-			System.out.println("Cliente" + r.getCliente());
+			System.out.println("Cliente" + c.getId());
 			PreparedStatement ps = con.prepareStatement("INSERT INTO servicoreal(id_cliente) VALUES (?)");
-			ps.setInt(1, r.getCliente().getId());
-			System.out.println("DAO" + r.getCliente());
+			ps.setInt(1, c.getId());
+			
 			status = ps.executeUpdate();
 
 			

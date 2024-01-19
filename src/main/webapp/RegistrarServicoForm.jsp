@@ -27,10 +27,8 @@
 			<tr>
 				<td>Cliente: </td>
 				<td>				
-					<select>
+					<select name="id">
 						<option>Selecione</option>
-						<option name="id" value="1">1</option>
-						
 						 <%
 						
 						for(Cliente cliente:clientes){
