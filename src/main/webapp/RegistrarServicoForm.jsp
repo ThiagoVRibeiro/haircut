@@ -25,13 +25,13 @@
 		List<FormaPagamento> listFormaPagamento = formapagamentoDAO.getAllFormaPagamentos();
 	%>
 
-	<form action="RegistrarServicoAdd.jsp" method="post">
+	<form  action="RegistrarServicoAdd.jsp" method="post">
 
 		<table>
 			<tr>
 				<td>Cliente: </td>
 				<td>				
-					<select name="id">
+					<select name="valores">
 						<option>Selecione</option>
 						 <%
 						
@@ -43,25 +43,23 @@
 						} %>
 						</select>
 						
-					</select>
 				</td>
 			</tr>
 			<tr>
 				<td>Forma de Pagamento: </td>
 				<td>				
-					<select name="fp">
+					<select name="valores">
 						<option>Selecione</option>
 						 <%
 						
 						for(FormaPagamento formaPagamento:listFormaPagamento){
 						%>
-						<option value="<%=formaPagamento.getId() %>"><%=formaPagamento.getNome() %></option>
+						<option value="<%=formaPagamento.getId()%>"><%=formaPagamento.getNome() %></option>
 						<%
-						System.out.println(formaPagamento.getNome());
+						System.out.println(formaPagamento.getId());
 						} %>
 						</select>
 						
-					</select>
 				</td>
 			</tr>
 			<!-- <tr>
