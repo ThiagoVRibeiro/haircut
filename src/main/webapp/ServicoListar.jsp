@@ -2,26 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Visualização de serviços</title>
+<title>Visualizaï¿½ï¿½o de serviï¿½os</title>
 </head>
 <body>
-	<%@ page import="com.haircut.dao.servicoDAO, com.haircut.bean.*, java.util.*" %>
+	<%@ page import="com.haircut.dao.ServicoDAO,com.haircut.bean.*,java.util.*" %>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	
-	<h1>Listagem de Serviços</h1>
+	<h1>Listagem de Serviï¿½os</h1>
 
 
 	<%
-		List<Servico> list = servicoDAO.getAllServicos();
-		request.setAttribute("list", list);
+	p
+
+			List<Servico> list = ServicoDAO.getAllServicos();
+			request.setAttribute("list", list);
 	%>
 	
 	<table border="1">
 		<tr>
 			<th>ID</th>
-			<th>NomeServiço</th>
-			<th>DescriçãoServico</th>
-			<th>ValorServiço</th>
+			<th>NomeServiï¿½o</th>
+			<th>Descriï¿½ï¿½oServico</th>
+			<th>ValorServiï¿½o</th>
 		</tr>
 		
 		<c:forEach items="${list}" var="servico">

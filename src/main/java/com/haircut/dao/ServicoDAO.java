@@ -9,7 +9,7 @@ import java.util.List;
 
 import com.haircut.bean.Servico;
 
-public class servicoDAO {
+public class ServicoDAO {
 
 	public static Connection getConnection() {
 		Connection con = null;

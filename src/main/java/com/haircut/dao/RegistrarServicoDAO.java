@@ -39,14 +39,14 @@ public class RegistrarServicoDAO {
 			System.out.println(r.getCliente());
 			status = ps.executeUpdate();*/
 
-			System.out.println("Cliente " + c[0] + " Forma pagamento " + c[1]);
-			int clInt = Integer.parseInt(c[0]);
+			System.out.println("Cliente " + c[0] + " Forma pagamento " + c[2] + "Servico Realizado " + c[1]);
+			/*int clInt = Integer.parseInt(c[0]);
 			int fmInt = Integer.parseInt(c[1]);
 			PreparedStatement ps = con.prepareStatement("INSERT INTO servicoreal(id_cliente, id_formapagamento) VALUES (?, ?)");
 			ps.setInt(1, clInt);
 			ps.setInt(2, fmInt);
 			
-			status = ps.executeUpdate();
+			status = ps.executeUpdate();*/
 
 			
 			
