@@ -7,11 +7,9 @@
 <title>EditarServico</title>
 </head>
 <body>
-	<%@page import="com.haircut.bean.Servico,com.haircut.dao.ServicoDAO" %>
+	<%@page import="com.haircut.bean.Servico, com.haircut.dao.ServicoDAO" %>
 	
 	<%
-		p
-
 				String id = request.getParameter("id");
 				Servico servico = ServicoDAO.getRegistroServicoById(Integer.parseInt(id));
 		%>

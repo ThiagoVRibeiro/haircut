@@ -2,18 +2,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Visualiza��o de servi�os</title>
+<title>Visualização de serviços</title>
 </head>
 <body>
 	<%@ page import="com.haircut.dao.ServicoDAO,com.haircut.bean.*,java.util.*" %>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	
-	<h1>Listagem de Servi�os</h1>
+	<h1>Listagem de Serviços</h1>
 
 
 	<%
-	p
-
 			List<Servico> list = ServicoDAO.getAllServicos();
 			request.setAttribute("list", list);
 	%>
