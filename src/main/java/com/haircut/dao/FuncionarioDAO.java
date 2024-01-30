@@ -28,11 +28,12 @@ public class FuncionarioDAO {
 		
 		try {
 			Connection con = getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO funcionario(nome, funcao, email, endereco) VALUES (?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("INSERT INTO funcionario(nome, funcao, email, endereco, telefone) VALUES (?,?,?,?,?)");
 			ps.setString(1, s.getNome());
 			ps.setString(2, s.getFuncao());
 			ps.setString(3, s.getEmail());
 			ps.setString(4, s.getEndereco());
+			ps.setString(5, s.getTelefone());
 			status = ps.executeUpdate();
 			
 		} catch (Exception e) {
@@ -57,6 +58,7 @@ public class FuncionarioDAO {
 				funcionario.setFuncao(rs.getString("funcao"));
 				funcionario.setEmail(rs.getString("email"));
 				funcionario.setEndereco(rs.getString("endereco"));
+				funcionario.setTelefone(rs.getString("telefone"));
 				list.add(funcionario);
 				
 			}
@@ -64,6 +66,7 @@ public class FuncionarioDAO {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+		System.out.println(list);	
 		return list;
 	}
 	
@@ -92,6 +95,7 @@ public class FuncionarioDAO {
 			ps.setString(2, s.getFuncao());
 			ps.setString(3, s.getEmail());
 			ps.setString(4, s.getEndereco());
+			ps.setString(5, s.getTelefone());
 			ps.setInt(5, s.getId());
 			status = ps.executeUpdate();
 			
@@ -118,6 +122,7 @@ public class FuncionarioDAO {
 				funcionario.setFuncao(rs.getString("funcao"));
 				funcionario.setEmail(rs.getString("email"));
 				funcionario.setEndereco(rs.getString("endereco"));
+				funcionario.setTelefone(rs.getString("telefone"));
 			}
 			
 		} catch (Exception e) {

@@ -11,6 +11,8 @@
 	<a href="ServicoListar.jsp">Listar Serviço</a></br>
 	<a href="ClienteAdicionar.jsp">Cadastrar Cliente</a>
 	<a href="ClienteListar.jsp">Listar Cliente</a></br>
+	<a href="FuncionarioAdicionar.jsp">Cadastrar Funcionario</a>
+	<a href="FuncionarioListar.jsp">Listar Funcionario</a></br>
 	<a href="FormaPagamentoAdicionar.jsp">Cadastrar Forma de Pagamento</a>
 	<a href="FormaPagamentoListar.jsp">Listar Forma de Pagamento</a></br>
 	<a href="RegistrarServico.jsp">Registrar serviço realizado</a>
