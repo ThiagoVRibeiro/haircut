@@ -2,19 +2,21 @@ package com.haircut.bean;
 
 public class Funcionario extends Pessoa{
 
-	private String email;
-	private String endereco;
-	private String funcao;
+	public String email;
+	public String endereco;
+	public String funcao;
 	
-	public Funcionario() {
-		super();
-	}
+	
 
 	public Funcionario(Integer id, String nome, String telefone, String email, String endereco, String funcao) {
 		super(id, nome, telefone);
 		this.email = email;
 		this.endereco = endereco;
 		this.funcao = funcao;
+	}
+	
+	public Funcionario() {
+		super();
 	}
 
 	public String getEmail() {

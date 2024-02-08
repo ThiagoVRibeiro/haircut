@@ -30,23 +30,19 @@ public class RegistrarServicoDAO {
 		
 		try {
 			Connection con = getConnection();
-			/*PreparedStatement ps = con.prepareStatement("INSERT INTO servicorealizado(observacao, id_funcionario, id_cliente, id_servico, id_formapagamento) VALUES (?,?,?,?,?)");
-			ps.setString(1, r.getObservacao());
-			ps.setInt(2, r.getCabeleireiro().getId());
-			ps.setInt(3, r.getCliente().getId());
-			ps.setInt(4, r.getServico().getId());
-			ps.setInt(5, r.getFormaPagamento().getId());
-			System.out.println(r.getCliente());
-			status = ps.executeUpdate();*/
-
-			System.out.println("Cliente " + c[0] + " Forma pagamento " + c[2] + "Servico Realizado " + c[1]);
-			/*int clInt = Integer.parseInt(c[0]);
-			int fmInt = Integer.parseInt(c[1]);
-			PreparedStatement ps = con.prepareStatement("INSERT INTO servicoreal(id_cliente, id_formapagamento) VALUES (?, ?)");
+			System.out.println("Cliente " + c[0] + " Funcionario " + c[1] + " Servico Realizado " + c[2] + " FormaPAgamento" + c[3] + " Observação: " + c[4]);
+			int clInt = Integer.parseInt(c[0]);
+			int fInt = Integer.parseInt(c[1]);
+			int srInt = Integer.parseInt(c[2]);
+			int fmInt = Integer.parseInt(c[3]);
+			PreparedStatement ps = con.prepareStatement("INSERT INTO servicorealizado(id_cliente, id_funcionario, id_servico, id_formapagamento, observacao) VALUES (?, ?, ?, ?, ?)");
 			ps.setInt(1, clInt);
-			ps.setInt(2, fmInt);
+			ps.setInt(2, fInt);
+			ps.setInt(3, srInt);
+			ps.setInt(4, fmInt);
+			ps.setString(5, c[4]);
 			
-			status = ps.executeUpdate();*/
+			status = ps.executeUpdate();
 
 			
 			

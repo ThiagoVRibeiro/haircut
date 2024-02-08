@@ -44,15 +44,17 @@ public class FuncionarioDAO {
 	}
 	
 	public static List<Funcionario> getAllFuncionarios(){
+		Funcionario funcionario = new Funcionario();
 		List<Funcionario> list = new ArrayList<Funcionario>();
 		
 		try {
 			Connection con = getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM funcionario");
-			ResultSet rs = ps.executeQuery();
+			ResultSet rs = ps.executeQuery();		
+			System.out.println("Lista3: " + rs );
 			
 			while(rs.next()) {
-				Funcionario funcionario = new Funcionario();
+				
 				funcionario.setId(rs.getInt("id"));
 				funcionario.setNome(rs.getString("nome"));
 				funcionario.setFuncao(rs.getString("funcao"));
@@ -60,7 +62,7 @@ public class FuncionarioDAO {
 				funcionario.setEndereco(rs.getString("endereco"));
 				funcionario.setTelefone(rs.getString("telefone"));
 				list.add(funcionario);
-				
+				System.out.println("Lista: " + rs.getString("email") + funcionario);
 			}
 			
 		} catch (Exception e) {

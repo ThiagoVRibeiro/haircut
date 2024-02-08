@@ -14,6 +14,7 @@
 	<%
 		List<Funcionario> list = FuncionarioDAO.getAllFuncionarios();
 		request.setAttribute("list", list);
+		System.out.println("List2#### : " +list);
 	%>
 	
 	<table border="1">

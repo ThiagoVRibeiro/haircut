@@ -64,6 +64,7 @@ public class ClienteDAO {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+		System.out.println(list);	
 		return list;
 	}
 	

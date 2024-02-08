@@ -87,7 +87,7 @@
 				</select></td>
 			</tr>
 			
-			<td value="serv"></td>
+		
 			<!-- Forma de pagamento -->
 			<tr>
 				<td>Forma de Pagamento:</td>
@@ -102,6 +102,11 @@
 						//System.out.println(formaPagamento.getId());
 						} %>
 				</select></td>
+			</tr>
+			
+			<tr>
+				<td>Observação:</td>
+				<td><input type="text" name="valores" /></td>
 			</tr>
 			
 			<tr>
