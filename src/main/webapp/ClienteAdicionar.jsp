@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<jsp:include page="ClienteForm.html"></jsp:include>
+	<jsp:include page="ClienteForm.jsp"></jsp:include>
 
 </body>
 </html>
