@@ -7,5 +7,5 @@
 
 <%
 	ClienteDAO.deletarCliente(c);
-	response.sendRedirect("ClienteListar.jsp");
+	response.sendRedirect("ClienteForm.jsp");
 %>

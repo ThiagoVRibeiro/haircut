@@ -7,5 +7,5 @@
 
 <%
 	FuncionarioDAO.deletarFuncionario(f);
-	response.sendRedirect("FuncionarioListar.jsp");
+	response.sendRedirect("FuncionarioForm.jsp");
 %>

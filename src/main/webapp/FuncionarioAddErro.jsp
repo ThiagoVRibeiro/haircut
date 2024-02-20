@@ -8,6 +8,6 @@
 </head>
 <body>
 	<p>Funcionario não registrado</p>
-	<jsp:include page="FuncionarioForm.html"></jsp:include>
+	<jsp:include page="FuncionarioForm.jsp"></jsp:include>
 </body>
 </html>

@@ -12,7 +12,7 @@
 <body>
 	<%
 		int i = ClienteDAO.updateCliente(c);
-		response.sendRedirect("ClienteListar.jsp");
+		response.sendRedirect("ClienteForm.jsp");
 	%>
 </body>
 </html> 

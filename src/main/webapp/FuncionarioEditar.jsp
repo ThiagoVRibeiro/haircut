@@ -12,7 +12,7 @@
 <body>
 	<%
 		int i = FuncionarioDAO.updateFuncionario(f);
-		response.sendRedirect("FuncionarioListar.jsp");
+		response.sendRedirect("FuncionarioForm.jsp");
 	%>
 </body>
 </html> 
