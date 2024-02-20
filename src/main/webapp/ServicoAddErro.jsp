@@ -8,6 +8,6 @@
 </head>
 <body>
 	<p>Registro com erro</p>
-	<jsp:include page="ServicoForm.html"></jsp:include>
+	<jsp:include page="ServicoForm.jsp"></jsp:include>
 </body>
 </html>

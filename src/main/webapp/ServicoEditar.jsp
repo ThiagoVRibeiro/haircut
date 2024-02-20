@@ -12,7 +12,7 @@
 <body>
 	<%
 			int i = ServicoDAO.updateServico(s);
-			response.sendRedirect("ServicoListar.jsp");
+			response.sendRedirect("ServicoForm.jsp");
 	%>
 </body>
 </html> 

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<jsp:include page="ServicoForm.html"></jsp:include>
+	<jsp:include page="ServicoForm.jsp"></jsp:include>
 
 </body>
 </html>
