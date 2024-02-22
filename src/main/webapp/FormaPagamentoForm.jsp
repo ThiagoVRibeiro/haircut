@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,11 +11,7 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="resources/css/Style.css" />
 </head>
-</head>
 <body>
-
-	<%@ page import="com.haircut.dao.ServicoDAO,com.haircut.bean.*,java.util.*" %>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 	<div>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -49,67 +46,52 @@
 			</div>
 		</nav>
 	</div>
-
 	<div class="registration-form">
-		<h1>Cadastrar Novo Serviço</h1>
 
-		<form action="ServicoAdd.jsp" method="post">
+		<h1>Cadastrar Nova Forma de Pagamento</h1>
+
+		<form action="FormaPagamentoAdd.jsp" method="post">
 			<div class="form-group">
-				<label for="servico">Serviço</label> <input type="text"
-					class="form-control" id="nomeServico" name="nomeServico"
-					placeholder="Nome do serviço">
-			</div>
-			<div class="form-group">
-				<label for="descricao">Descrição</label> <input type="text"
-					class="form-control" id="descricaoServico" name="descricaoServico"
-					placeholder="Descrição breve do serviço">
-			</div>
-			<div class="form-group">
-				<label for="valor">Valor</label> <input type="number"
-					class="form-control" id="valorServico" name="valorServico"
-					placeholder="Descrição breve do serviço">
+				<label for="nome">Nome</label> <input type="text"
+					class="form-control" id="nome" name="nome"
+					placeholder="Nome da forma de pagamento">
 			</div>
 
 			<button type="submit" class="btn btn-primary">Enviar</button>
 		</form>
 	</div>
-	<br>
 
 	<div class="registration-list">
-	
-	
-	<%
-			List<Servico> list = ServicoDAO.getAllServicos();
-			request.setAttribute("list", list);
-	%>		
+		<%@ page
+			import="com.haircut.dao.FormaPagamentoDAO, com.haircut.bean.*, java.util.*"%>
+		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="f"%>
+
+		<%
+		List<FormaPagamento> list = FormaPagamentoDAO.getAllFormaPagamentos();
+		request.setAttribute("list", list);
+		%>
+
 		<table class="table">
 			<thead>
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">Nome</th>
-					<th scope="col">Descrição</th>
-					<th scope="col">Valor</th>
-					<th scope="col"></th>
-					<th scope="col"></th>
 				</tr>
 			</thead>
-			<c:forEach items="${list}" var="servico">
-				<tbody>
-					<tr>
-						<td>${servico.getId()}</td>
-						<td>${servico.getNomeServico()}</td>
-						<td>${servico.getDescricaoServico()}</td>
-						<td>${servico.getValorServico()}</td>
-						<td><a href="ServicoFormEditar.jsp?id=${servico.getId() }">Editar</a></td>
-						<td><a href="ServicoDeletar.jsp?id=${servico.getId() }">Excluir</a></td>
-					</tr>
-				</tbody>
-			</c:forEach>
+			<f:forEach items="${list}" var="formapagamento">
+				<tr>
+					<td>${formapagamento.getId()}</td>
+					<td>${formapagamento.getNome()}</td>
+					<td><a
+						href="FormaPagamentoFormEditar.jsp?id=${formapagamento.getId() }">Editar</a></td>
+					<td><a
+						href="FormaPagamentoFormDeletar.jsp?id=${formapagamento.getId() }">Excluir</a></td>
+				</tr>
+			</f:forEach>
 		</table>
 
+
 	</div>
-
-
 	<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -8,6 +8,6 @@
 </head>
 <body>
 	<p>Forma de pagamento adicionado com sucesso</p>
-	<jsp:include page="FormaPagamentoForm.html"></jsp:include>
+	<jsp:include page="FormaPagamentoForm.jsp"></jsp:include>
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<jsp:include page="FormaPagamentoForm.html"></jsp:include>
+	<jsp:include page="FormaPagamentoForm.jsp"></jsp:include>
 
 </body>
 </html>

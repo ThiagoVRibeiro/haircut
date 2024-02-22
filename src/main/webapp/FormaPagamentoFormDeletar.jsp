@@ -7,5 +7,5 @@
 
 <%
 	FormaPagamentoDAO.deletarFormaPagamento(f);
-	response.sendRedirect("FormaPagamentoListar.jsp");
+	response.sendRedirect("FormaPagamentoForm.jsp");
 %>
