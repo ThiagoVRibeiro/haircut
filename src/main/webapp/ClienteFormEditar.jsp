@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -57,7 +57,7 @@
 
 	<div class="registration-list-edit">
 
-		<form action="ClienteEditar.jsp" method="post">
+		<form action="ClienteEditar.jsp" accept-charset="utf-8" method="post">
 			<input type="hidden" name="id" value="<%=cliente.getId()%>">
 			<table class="table">
 				<thead>

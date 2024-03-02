@@ -21,3 +21,27 @@
 	margin-left: 5%;
 	margin-right: 5%;
 }
+
+.selects-registrar-servico{
+	margin-top: 1%;
+}
+
+#select-cliente{
+	width: 50%;
+}
+
+#select-funcionario{
+	width: 47.3%;
+}
+
+#select-servico{
+	width: 43.6%;
+}
+
+#select-pagamento{
+	width: 41.5%;
+}
+
+#select-observacao{
+	width: 47.0%;
+}

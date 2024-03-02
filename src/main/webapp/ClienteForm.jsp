@@ -9,7 +9,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="resources/css/Style.css" />
+<link rel="stylesheet" type="text/css" href="resources/css/Style.css" />
 </head>
 
 <body>
@@ -69,7 +69,7 @@
 			<button type="submit" class="btn btn-primary">Enviar</button>
 		</form>
 	</div>
-<br>
+	<br>
 	<div class="registration-list">
 		<%
 		List<Cliente> list = ClienteDAO.getAllClientes();
@@ -93,6 +93,26 @@
 						<td>${cliente.getNome()}</td>
 						<td>${cliente.getTelefone()}</td>
 						<td><a href="ClienteFormEditar.jsp?id=${cliente.getId() }">Editar</a></td>
+						<td><button type="button" class="btn btn-info btn-lg"
+								data-toggle="modal" data-target="#confirm">Excluir Modal</button>
+
+							<div class="modal fade" id="confirm" role="dialog">
+								<div class="modal-dialog modal-md">
+
+									<div class="modal-content">
+										<div class="modal-body">
+											<p>Deseja realmente excluir?</p>
+										</div>
+										<div class="modal-footer">
+											<a href="ClienteFormDeletar.jsp?id=${cliente.getId() }" type="button" class="btn btn-danger"
+												id="delete">Apagar Registo</a>
+											<button type="button" data-dismiss="modal"
+												class="btn btn-default">Cancelar</button>
+										</div>
+									</div>
+
+								</div>
+							</div></td>
 						<td><a href="ClienteFormDeletar.jsp?id=${cliente.getId() }">Excluir</a></td>
 					</tr>
 				</tbody>

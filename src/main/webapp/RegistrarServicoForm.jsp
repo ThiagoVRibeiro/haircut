@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/Style.css" />
 </head>
 <body>
-<div>
+	<div>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 			<a class="navbar-brand nav-style" href="index.jsp">HairCut</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -47,107 +47,112 @@
 		</nav>
 	</div>
 
-<div class="registration-form">
-	<h1>Registrar Serviço Realizado</h1>
+	<div class="registration-form">
+		<h1>Registrar Serviço Realizado</h1>
 
 
-	<%@page import="com.haircut.bean.RegistrarServico, com.haircut.dao.RegistrarServicoDAO"%>
-	<%@page import="com.haircut.bean.Cliente, com.haircut.dao.ClienteDAO"%>
-	
-	<%@page import="com.haircut.bean.Funcionario,com.haircut.dao.FuncionarioDAO"%>
-	<%@page import="com.haircut.bean.Servico,com.haircut.dao.ServicoDAO"%>
-	<%@page import="com.haircut.bean.FormaPagamento,com.haircut.dao.FormaPagamentoDAO"%>
+		<%@page
+			import="com.haircut.bean.RegistrarServico, com.haircut.dao.RegistrarServicoDAO"%>
+		<%@page import="com.haircut.bean.Cliente, com.haircut.dao.ClienteDAO"%>
+
+		<%@page
+			import="com.haircut.bean.Funcionario,com.haircut.dao.FuncionarioDAO"%>
+		<%@page import="com.haircut.bean.Servico,com.haircut.dao.ServicoDAO"%>
+		<%@page
+			import="com.haircut.bean.FormaPagamento,com.haircut.dao.FormaPagamentoDAO"%>
 
 
 
-	<%
+		<%
 		ClienteDAO clienteDAO = new ClienteDAO();
-		List<Cliente>clientes=clienteDAO.getAllClientes();
-		
+		List<Cliente> clientes = clienteDAO.getAllClientes();
+
 		FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 		List<Funcionario> listFuncionario = funcionarioDAO.getAllFuncionarios();
-					
+
 		ServicoDAO servicoDAO = new ServicoDAO();
 		List<Servico> listServico = servicoDAO.getAllServicos();
-						
+
 		FormaPagamentoDAO formapagamentoDAO = new FormaPagamentoDAO();
 		List<FormaPagamento> listFormaPagamento = formapagamentoDAO.getAllFormaPagamentos();
-	%>
+		%>
 
-	<form action="RegistrarServicoAdd.jsp" method="post">
-	
-	<div class="form-inline">
-				<label class="my-1 mr-2" for="servico">Cliente</label> 
-				<select name="valores" class="custom-select my-1 mr-sm-2" data-width="500px">
-						<option>Selecione</option>
-						<%
-						
-						for(Cliente cliente:clientes){
-						%>
-						<option value="<%=cliente.getId() %>"><%=cliente.getNome() %></option>
-						<%
-						
-						} %>
-				</select>
-			</div>
-			
-				<div class="form-inline">
-				<label class="my-1 mr-2" for="servico">Funcionário</label> 
-				<select name="valores" class="custom-select my-1 mr-sm-2" data-width="500px">
-						<option>Selecione</option>
-						 <%
-						
-						for(Funcionario funcionario:listFuncionario){
-						%>
-						<option value="<%=funcionario.getId()%>"><%=funcionario.getNome() %></option>
-						<%
-						
-						} %>
+		<form action="RegistrarServicoAdd.jsp" method="post">
+
+			<div class="form-inline selects-registrar-servico">
+				<label class="my-1 mr-2" for="servico">Cliente</label> <select
+					name="valores" class="custom-select my-1 mr-sm-2"
+					id="select-cliente" data-width="500px">
+					<option>Selecione</option>
+					<%
+					for (Cliente cliente : clientes) {
+					%>
+					<option value="<%=cliente.getId()%>"><%=cliente.getNome()%></option>
+					<%
+					}
+					%>
 				</select>
 			</div>
 
-<div class="form-inline">
-				<label class="my-1 mr-2" for="servico">Serviço Realizado</label> 
-				<select name="valores" class="custom-select my-1 mr-sm-2" data-width="500px">
-						<option>Selecione</option>
-						<%
-						
-						for(Servico servico:listServico){
-						%>
-						<option name="serv" value="<%=servico.getId()%>"><%=servico.getNomeServico() %></option>
-						<%
-						
-						} %>
-				</select>
-			</div>
-			
-			<div class="form-inline">
-				<label class="my-1 mr-2" for="servico">Forma de Pagamento</label> 
-				<select name="valores" class="custom-select my-1 mr-sm-2" data-width="500px">
-						<option>Selecione</option>
-						<%
-						
-						for(FormaPagamento formaPagamento:listFormaPagamento){
-						%>
-						<option value="<%=formaPagamento.getId()%>"><%=formaPagamento.getNome() %></option>
-						<%
-						} %>
+			<div class="form-inline selects-registrar-servico">
+				<label class="my-1 mr-2" for="servico">Funcionário</label> <select
+					name="valores" class="custom-select my-1 mr-sm-2"
+					id="select-funcionario" data-width="500px">
+					<option>Selecione</option>
+					<%
+					for (Funcionario funcionario : listFuncionario) {
+					%>
+					<option value="<%=funcionario.getId()%>"><%=funcionario.getNome()%></option>
+					<%
+					}
+					%>
 				</select>
 			</div>
 
+			<div class="form-inline selects-registrar-servico">
+				<label class="my-1 mr-2" for="servico">Serviço Realizado</label> <select
+					name="valores" class="custom-select my-1 mr-sm-2"
+					id="select-servico" data-width="500px">
+					<option>Selecione</option>
+					<%
+					for (Servico servico : listServico) {
+					%>
+					<option name="serv" value="<%=servico.getId()%>"><%=servico.getNomeServico()%></option>
+					<%
+					}
+					%>
+				</select>
+			</div>
+
+			<div class="form-inline selects-registrar-servico">
+				<label class="my-1 mr-2" for="servico">Forma de Pagamento</label> <select
+					name="valores" class="custom-select my-1 mr-sm-2"
+					id="select-pagamento" data-width="500px">
+					<option>Selecione</option>
+					<%
+					for (FormaPagamento formaPagamento : listFormaPagamento) {
+					%>
+					<option value="<%=formaPagamento.getId()%>"><%=formaPagamento.getNome()%></option>
+					<%
+					}
+					%>
+				</select>
+			</div>
+			<div class="selects-registrar-servico">
 			<tr>
 				<td>Observação:</td>
-				<td><input type="text" name="valores" /></td>
+				<td ><input id="select-observacao" type="text" name="valores" /></td><br>
 			</tr>
-			
+
 			<tr>
-				<td colspan="2"><input type="submit" value="Registrar Serviço" />
+				<td colspan="2"><input class="selects-registrar-servico" type="submit" value="Registrar Serviço" />
 				</td>
 			</tr>
-		</table>
-	</form>
+			</div>
+			</table>
+		</form>
 	</div>
-	
+
 	<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.bundle.min.js"></script>

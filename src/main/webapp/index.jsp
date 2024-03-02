@@ -52,7 +52,7 @@
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 		</ol>
-		<div class="carousel-inner">
+		<!--<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img src="resources/img/maquinaCortarCabelo.jpeg" class="d-block w-100" alt="/resources/img/maquinaCortarCabelo.jpeg">
 			</div>
@@ -62,7 +62,7 @@
 			<div class="carousel-item">
 				<img src="resources/img/suporteMaquinaCortarCabelo.jpeg" class="d-block w-100" alt="/resources/img/suporteMaquinaCortarCabelo.jpeg">
 			</div>
-		</div>
+		</div>-->
 		<a class="carousel-control-prev" href="#carouselExampleIndicators"
 			role="button" data-slide="prev"> <span
 			class="carousel-control-prev-icon" aria-hidden="true"></span> <span
@@ -73,20 +73,6 @@
 			class="sr-only">Next</span>
 		</a>
 	</div>
-
-	<a href="ServicoAdicionar.jsp">Cadastrar Serviço</a>
-	<a href="ServicoListar.jsp">Listar Serviço</a>
-	</br>
-	<a href="ClienteAdicionar.jsp">Cadastrar Cliente</a>
-	<a href="ClienteListar.jsp">Listar Cliente</a>
-	</br>
-	<a href="FuncionarioAdicionar.jsp">Cadastrar Funcionario</a>
-	<a href="FuncionarioListar.jsp">Listar Funcionario</a>
-	</br>
-	<a href="FormaPagamentoAdicionar.jsp">Cadastrar Forma de Pagamento</a>
-	<a href="FormaPagamentoListar.jsp">Listar Forma de Pagamento</a>
-	</br>
-	<a href="RegistrarServico.jsp">Registrar serviço realizado</a>
 
 
 	<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>

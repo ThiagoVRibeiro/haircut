@@ -37,6 +37,7 @@ public class ClienteDAO {
 			System.out.println(s.getNome());
 			System.out.println(s.getTelefone());
 			
+			
 		} catch (Exception e) {
 			System.out.println(e);
 		}

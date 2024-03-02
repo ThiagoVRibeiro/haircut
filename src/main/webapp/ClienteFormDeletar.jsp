@@ -5,7 +5,12 @@
 <jsp:useBean id="c" class="com.haircut.bean.Cliente"></jsp:useBean>
 <jsp:setProperty property="*" name="c"/>
 
+
+
+
+
 <%
+	System.out.print("Delete: " + c);
 	ClienteDAO.deletarCliente(c);
 	response.sendRedirect("ClienteForm.jsp");
 %>
