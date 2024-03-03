@@ -145,7 +145,7 @@
 			</tr>
 
 			<tr>
-				<td colspan="2"><input class="selects-registrar-servico" type="submit" value="Registrar Serviço" />
+				<td colspan="2"><input class="selects-registrar-servico btn-registrar-servico btn btn-primary" type="submit" value="Registrar Serviço" />
 				</td>
 			</tr>
 			</div>

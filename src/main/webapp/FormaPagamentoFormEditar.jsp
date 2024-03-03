@@ -8,6 +8,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="resources/css/Style.css" />
 <title>Editar Forma de Pagamento</title>
 </head>
 <body>
@@ -55,8 +56,8 @@
 	%>
 
 	<div class="registration-list-edit">
-
-		<form action="FormaPagamentoForm.jsp" method="post">
+		<h1>Editar Forma de Pagamento</h1>
+		<form action="FormaPagamentoEditar.jsp" method="post">
 			<input type="hidden" name="id" value="<%=formaPagamento.getId()%>">
 			<table class="table">
 				<thead>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,13 +54,13 @@
 		</nav>
 	</div>
 
-
+	<br>
 	<div class="registration-list-edit">
-
+		<h1>Editar Serviço</h1>
 		<form action="ServicoEditar.jsp" method="post">
 			<input type="hidden" name="id" value="<%=servico.getId()%>">
 			<table class="table">
-			<thead>
+				<thead>
 					<tr>
 						<th scope="col">Nome Serviço</th>
 						<th scope="col">Descrição Serviço</th>
@@ -70,14 +70,15 @@
 				<tbody>
 					<tr>
 						<td><input type="text" name="nomeServico"
-						value="<%=servico.getNomeServico()%>" /></td>
+							value="<%=servico.getNomeServico()%>" /></td>
 						<td><input type="text" name="descricaoServico"
-						value="<%=servico.getDescricaoServico()%>" /></td>
+							value="<%=servico.getDescricaoServico()%>" /></td>
 						<td><input type="number" name="valorServico"
-						value="<%=servico.getValorServico()%>" /></td>
+							value="<%=servico.getValorServico()%>" /></td>
 					</tr>
 					<tr>
-						<td> <button type="submit" class="btn btn-primary">Enviar</button>
+						<td>
+							<button type="submit" class="btn btn-primary">Enviar</button>
 						</td>
 					</tr>
 				</tbody>

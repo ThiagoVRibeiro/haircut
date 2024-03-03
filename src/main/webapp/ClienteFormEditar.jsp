@@ -56,7 +56,7 @@
 	%>
 
 	<div class="registration-list-edit">
-
+		<h1>Editar Cliente</h1>
 		<form action="ClienteEditar.jsp" accept-charset="utf-8" method="post">
 			<input type="hidden" name="id" value="<%=cliente.getId()%>">
 			<table class="table">
@@ -74,7 +74,8 @@
 							value="<%=cliente.getTelefone()%>" /></td>
 					</tr>
 					<tr>
-						<td> <button type="submit" class="btn btn-primary">Enviar</button>
+						<td>
+							<button type="submit" class="btn btn-primary">Enviar</button>
 						</td>
 					</tr>
 				</tbody>

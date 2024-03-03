@@ -17,13 +17,23 @@
 }
 
 .registration-list-edit{
-	margin-top: 4%;
+	margin-top: 3%;
 	margin-left: 5%;
 	margin-right: 5%;
+	
+}
+
+.registration-list-edit h1{
+	
+	margin-left: 1%;
 }
 
 .selects-registrar-servico{
 	margin-top: 1%;
+}
+
+.btn-registrar-servico{
+	margin-top: 2%;
 }
 
 #select-cliente{

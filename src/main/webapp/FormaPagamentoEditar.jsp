@@ -12,7 +12,7 @@
 <body>
 	<%
 		int i = FormaPagamentoDAO.updateFormaPagamento(f);
-		response.sendRedirect("FormaPagamentoListar.jsp");
+		response.sendRedirect("FormaPagamentoForm.jsp");
 	%>
 </body>
 </html> 
