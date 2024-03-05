@@ -1,9 +1,15 @@
 @charset "UTF-8";
 
-
 .nav-style{
 	margin-left: 4%;
 }
+
+.dropdown-cadastro{
+	border-radius: 10px solid red;
+	color: white;
+	
+}
+
 .registration-form{
 	margin-top: 5%;
 	margin-left: 5%;

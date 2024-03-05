@@ -1,15 +1,15 @@
 <%@page import="com.haircut.dao.ClienteDAO" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <jsp:useBean id="s" class="com.haircut.bean.Cliente"></jsp:useBean>
 <jsp:setProperty property="*" name="s"/>
 
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 </head>
 
 <%
-	
+	System.out.println("ClienteADD: " + s.getNome());
 	int i = ClienteDAO.salvarCliente(s);
 
 	if(i > 0){

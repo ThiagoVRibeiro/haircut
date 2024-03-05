@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -31,7 +31,7 @@
 				<ul class="navbar-nav mr-auto">
 
 					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						class="nav-link dropdown-cadastro dropdown-toggle" href="#" id="navbarDropdown"
 						role="button" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> Controle de Cadastros </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -93,7 +93,7 @@
 						<td>${cliente.getNome()}</td>
 						<td>${cliente.getTelefone()}</td>
 						<td><a href="ClienteFormEditar.jsp?id=${cliente.getId() }">Editar</a></td>
-						<td><button type="button" class="btn btn-info btn-lg"
+						<!-- <td><button type="button" class="btn btn-info btn-lg"
 								data-toggle="modal" data-target="#confirm">Excluir Modal</button>
 
 							<div class="modal fade" id="confirm" role="dialog">
@@ -112,7 +112,7 @@
 									</div>
 
 								</div>
-							</div></td>
+							</div></td> -->
 						<td><a href="ClienteFormDeletar.jsp?id=${cliente.getId() }">Excluir</a></td>
 					</tr>
 				</tbody>
